@@ -1,8 +1,8 @@
 # FrontEnd
-## Fleet Overview
 
+### Fleet Overview
 ### Map components
-
+---
 * shows a map with real-time flights
 * each plane has an icon with the plane's direction
 * each plane is clickable and shows minimal details about the flight
@@ -15,7 +15,7 @@
   * line chart
   * graphs are rendered on the app's startup or by clicking the refresh button
 
-## Monitoring
+### Monitoring
 ---
 * a list of all attributes that we monitor from the flight
 * each attribute is clickable 
@@ -50,26 +50,26 @@
 * the flight will be streamed to FlightGear, and we will use FlightGear as a streamer and not as a simulator
 * connection is directed between frontend and agent
 
-## View Model
+### View Model
 ---
 * Abstraction for the view and for the model
 * The view model gives commands to the Model
 * Send notification/events to the view
 * View + View Model has a data binding between variables. (automatic updates between the view and the view model)
 
-## View
+### View
 ---
 * Presentation Logic
 * UI Components
 * The view give commands to the View Model
 
-## Model
+### Model
 ---
 * Get commands from the view model
 * Ask for data from the backend
 * Send notifications/events to the view model
 
-## other
+### other
 ---
 * Anomaly detector algorisms should be a plugins-compiled class file
 * use the class loader to load it to the app
