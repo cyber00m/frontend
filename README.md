@@ -2,7 +2,7 @@
 ## Fleet Overview
 
 ### Map components
----
+
 * shows a map with real-time flights
 * each plane has an icon with the plane's direction
 * each plane is clickable and shows minimal details about the flight
