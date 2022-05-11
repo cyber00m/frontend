@@ -1,2 +1,5 @@
-package com.example.flightgearjavafxjava;public class CSVScanner {
+package com.example.flightgearjavafxjava;
+
+public class CSVScanner {
+
 }
