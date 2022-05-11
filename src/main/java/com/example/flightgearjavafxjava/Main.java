@@ -117,6 +117,7 @@ public class Main extends Application {
         ViewModel vm = new ViewModel(m);
         wc.init(vm);
         wc.paint();
+
         tab1.setContent(wc.joystick);
         tab2.setContent(chart);
         tab3.setContent(bc);
