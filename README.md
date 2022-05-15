@@ -32,7 +32,7 @@
 ---
 * joystick - now the joystick is controlling the plane live!
 * clocks
-* a code editor – autopilot (interpeter)
+* a code editor – autopilot (interpreter)
 
 ## Time Capsule
 
