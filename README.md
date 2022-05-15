@@ -13,7 +13,7 @@
   * pie chart
   * bar chart
   * line chart
-  * graphs are rendered on the app's startup or by clicking the refresh button
+  * view.graphs are rendered on the app's startup or by clicking the refresh button
 
 ### Monitoring
 ---
@@ -39,7 +39,7 @@
 ### reusable components:
 ---
 * joystick - shows recorded flight values of the joystick and the sliders
-* attributes - can show the attributes of a recorded flight with their graphs
+* attributes - can show the attributes of a recorded flight with their view.graphs
 * line chart of anomalies
 * clocks
 * NEW - video player options: 

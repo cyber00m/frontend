@@ -32,8 +32,8 @@ public class Model extends Observable {
         }
         int port = Integer.parseInt(properties.get("port"));
         try {
-             fg = new Socket(properties.get("ip"), port);
-             out2fg = new PrintWriter(fg.getOutputStream());
+            fg = new Socket(properties.get("ip"), port);
+            out2fg = new PrintWriter(fg.getOutputStream());
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -66,7 +66,7 @@ public class Model extends Observable {
     }
 
     @Override
-     public void finalize(){
+    public void finalize(){
         try {
             out2fg.close();
             fg.close();
