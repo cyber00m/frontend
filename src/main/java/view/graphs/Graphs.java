@@ -43,7 +43,7 @@ public class Graphs extends AnchorPane
             this.getChildren().add(ap);
         }
         else
-            controller=null;
+            controller = null;
     }
 
 }
