@@ -43,10 +43,9 @@ public class LinearAnomalyDetector {
             this.cofeatures_ls.add(cof);
         }
     }
-
     //The phase of detecting the anomalies - in this phase we will receive a flight file and according to the
-//learning we performed we will know for a characteristic whether it deviates from what we learned
-//in the preliminary phase
+    //learning we performed we will know for a characteristic whether it deviates from what we learned
+    //in the preliminary phase
     @Override
     public List<AnomalyReport> detect(TimeSeries ts) {
         ArrayList<AnomalyReport> arl = new ArrayList<AnomalyReport>();
