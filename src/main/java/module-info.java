@@ -6,6 +6,6 @@ module com.example.flightgearjavafxjava {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.flightgearjavafxjava to javafx.fxml;
-    exports com.example.flightgearjavafxjava;
+    opens view to javafx.fxml;
+    exports view;
 }

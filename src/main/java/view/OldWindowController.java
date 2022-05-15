@@ -1,4 +1,4 @@
-package com.example.flightgearjavafxjava;
+package view;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -11,7 +11,7 @@ import view_model.ViewModel;
 
 import java.util.Observable;
 
-public class WindowController extends Observable {
+public class OldWindowController extends Observable {
     @FXML
     Canvas joystick;
     @FXML
@@ -26,7 +26,7 @@ public class WindowController extends Observable {
     double jx,jy;
     double mx,my;
 
-    public WindowController() {
+    public OldWindowController() {
         mousePushed = false;
         jx = 0;
         jy = 0;
@@ -48,14 +48,12 @@ public class WindowController extends Observable {
     public void mouseDown(MouseEvent me) {
         if (!mousePushed) {
             mousePushed = true;
-            System.out.println("mouse is down");
         }
     }
 
     public void mouseUp(MouseEvent me) {
         if (mousePushed) {
             mousePushed = false;
-            System.out.println("mouse is up");
             jx = mx;
             jy = my;
             paint();

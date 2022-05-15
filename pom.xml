@@ -81,7 +81,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.flightgearjavafxjava/com.example.flightgearjavafxjava.Main
+                                com.example.flightgearjavafxjava/view.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

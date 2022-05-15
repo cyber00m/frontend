@@ -1,4 +1,4 @@
-package com.example.flightgearjavafxjava;
+package view;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -6,8 +6,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.Model;
@@ -18,7 +16,7 @@ import java.io.IOException;
 public class Main extends Application {
 
     private Stage stage;
-    private TabPane tabPane;
+  //  private TabPane tabPane;
     final static String aircraftOne = "Aircraft I";
     final static String aircraftTwo = "Aircraft II";
     final static String aircraftThree = "Aircraft III";
@@ -30,16 +28,16 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
         BorderPane root = (BorderPane)fxmlLoader.load();
 
-        tabPane = new TabPane();
-        Tab tab1 = new Tab("Joystick");
-        tabPane.getTabs().add(tab1);
-        Tab tab2 = new Tab("Online Aircrafts");
-        tabPane.getTabs().add(tab2);
-        Tab tab3 = new Tab("Milage");
-        tabPane.getTabs().add(tab3);
-        Tab tab4 = new Tab("Fleet Size");
-        tabPane.getTabs().add(tab4);
-        root.setCenter(tabPane);
+//        tabPane = new TabPane();
+//        Tab tab1 = new Tab("Joystick");
+//        tabPane.getTabs().add(tab1);
+//        Tab tab2 = new Tab("Online Aircrafts");
+//        tabPane.getTabs().add(tab2);
+//        Tab tab3 = new Tab("Milage");
+//        tabPane.getTabs().add(tab3);
+//        Tab tab4 = new Tab("Fleet Size");
+//        tabPane.getTabs().add(tab4);
+//        root.setCenter(tabPane);
         Scene scene = new Scene(root, 300, 300);
 
         int onlinePlanes = 4, offlinePlanes = 10;
@@ -47,15 +45,15 @@ public class Main extends Application {
                 FXCollections.observableArrayList(
                         new PieChart.Data("Online", onlinePlanes),
                         new PieChart.Data("Offline", offlinePlanes));
-        final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("Online Aircrafts");
+        final PieChart pieChart = new PieChart(pieChartData);
+        pieChart.setTitle("Online Aircrafts");
 
         stage.setTitle("Nautical Miles");
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
-        final BarChart<String,Number> bc =
+        final BarChart<String,Number> barChart =
                 new BarChart<String,Number>(xAxis,yAxis);
-        bc.setTitle("Nautical Miles");
+        barChart.setTitle("Nautical Miles");
 
         XYChart.Series series1 = new XYChart.Series();
         series1.setName("2003");
@@ -80,7 +78,7 @@ public class Main extends Application {
         series3.getData().add(new XYChart.Data(aircraftThree, 18722.18));
         series3.getData().add(new XYChart.Data(aircraftFour, 17557.31));
         series3.getData().add(new XYChart.Data(aircraftFive, 92633.68));
-        bc.getData().addAll(series1, series2, series3);
+        barChart.getData().addAll(series1, series2, series3);
 
         stage.setTitle("Fleet Size");
         yAxis.setLabel("Miles");
@@ -113,15 +111,15 @@ public class Main extends Application {
         lineChart.getData().add(series);
 
         Model m = new Model("properties.txt");
-        WindowController wc = (WindowController) fxmlLoader.getController();
+        OldWindowController wc = (OldWindowController) fxmlLoader.getController();
         ViewModel vm = new ViewModel(m);
         wc.init(vm);
         wc.paint();
 
-        tab1.setContent(wc.joystick);
-        tab2.setContent(chart);
-        tab3.setContent(bc);
-        tab4.setContent(lineChart);
+//        tab1.setContent(wc.joystick);
+//        tab2.setContent(chart);
+//        tab3.setContent(barChart);
+//        tab4.setContent(lineChart);
 
         stage.setScene(scene);
         stage.show();
