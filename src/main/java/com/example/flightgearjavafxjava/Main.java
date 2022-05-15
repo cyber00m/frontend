@@ -19,11 +19,11 @@ public class Main extends Application {
 
     private Stage stage;
     private TabPane tabPane;
-    final static String austria = "Aircraft I";
-    final static String brazil = "Aircraft II";
-    final static String france = "Aircraft III";
-    final static String italy = "Aircraft IV";
-    final static String usa = "Aircraft V";
+    final static String aircraftOne = "Aircraft I";
+    final static String aircraftTwo = "Aircraft II";
+    final static String aircraftThree = "Aircraft III";
+    final static String aircraftFour = "Aircraft IV";
+    final static String aircraftFive = "Aircraft V";
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -59,27 +59,27 @@ public class Main extends Application {
 
         XYChart.Series series1 = new XYChart.Series();
         series1.setName("2003");
-        series1.getData().add(new XYChart.Data(austria, 25601.34));
-        series1.getData().add(new XYChart.Data(brazil, 20148.82));
-        series1.getData().add(new XYChart.Data(france, 10000));
-        series1.getData().add(new XYChart.Data(italy, 35407.15));
-        series1.getData().add(new XYChart.Data(usa, 12000));
+        series1.getData().add(new XYChart.Data(aircraftOne, 25601.34));
+        series1.getData().add(new XYChart.Data(aircraftTwo, 20148.82));
+        series1.getData().add(new XYChart.Data(aircraftThree, 10000));
+        series1.getData().add(new XYChart.Data(aircraftFour, 35407.15));
+        series1.getData().add(new XYChart.Data(aircraftFive, 12000));
 
         XYChart.Series series2 = new XYChart.Series();
         series2.setName("2004");
-        series2.getData().add(new XYChart.Data(austria, 57401.85));
-        series2.getData().add(new XYChart.Data(brazil, 41941.19));
-        series2.getData().add(new XYChart.Data(france, 45263.37));
-        series2.getData().add(new XYChart.Data(italy, 117320.16));
-        series2.getData().add(new XYChart.Data(usa, 14845.27));
+        series2.getData().add(new XYChart.Data(aircraftOne, 57401.85));
+        series2.getData().add(new XYChart.Data(aircraftTwo, 41941.19));
+        series2.getData().add(new XYChart.Data(aircraftThree, 45263.37));
+        series2.getData().add(new XYChart.Data(aircraftFour, 117320.16));
+        series2.getData().add(new XYChart.Data(aircraftFive, 14845.27));
 
         XYChart.Series series3 = new XYChart.Series();
         series3.setName("2005");
-        series3.getData().add(new XYChart.Data(austria, 45000.65));
-        series3.getData().add(new XYChart.Data(brazil, 44835.76));
-        series3.getData().add(new XYChart.Data(france, 18722.18));
-        series3.getData().add(new XYChart.Data(italy, 17557.31));
-        series3.getData().add(new XYChart.Data(usa, 92633.68));
+        series3.getData().add(new XYChart.Data(aircraftOne, 45000.65));
+        series3.getData().add(new XYChart.Data(aircraftTwo, 44835.76));
+        series3.getData().add(new XYChart.Data(aircraftThree, 18722.18));
+        series3.getData().add(new XYChart.Data(aircraftFour, 17557.31));
+        series3.getData().add(new XYChart.Data(aircraftFive, 92633.68));
         bc.getData().addAll(series1, series2, series3);
 
         stage.setTitle("Fleet Size");
